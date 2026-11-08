@@ -23,6 +23,8 @@ With a plain random split, **97% of the test rows have an identical copy in the 
 
 Held-out test (61 patients): accuracy 0.79, ROC AUC 0.88. Most influential features: `thal`, `ca`, `oldpeak`.
 
+**Robustness:** one split of 61 patients is noisy, so the notebook repeats the split 10 times. Test ROC AUC: Random Forest 0.915 (±0.022), Logistic Regression 0.906 (±0.025), KNN 0.876 (±0.035). Random Forest and Logistic Regression are practically equivalent, so the ranking between them should not be over-interpreted.
+
 ## Limitations
 Small dataset (303 patients), so estimates are noisy and the test set is small. No external validation. This is a learning project, not a medical tool.
 
